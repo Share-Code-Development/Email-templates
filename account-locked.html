@@ -1,58 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-    body { font-family: Arial, sans-serif; background-color: #f4f4f4; color: #333; }
-    .container { max-width: 600px; margin: 40px auto; padding: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
-    .header { text-align: center; padding-bottom: 20px; }
-    .header img { max-width: 150px; }
-    .content { line-height: 1.6; }
-    .button { background-color: #007bff; color: #ffffff; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 20px; }
-    .table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-    .table th, .table td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-    .table th { background-color: #f7f7f7; }
-    .footer { text-align: center; margin-top: 40px; font-size: 0.9em; color: #666; }
-</style>
+    <meta charset="utf-8">
+    <style>
+        .log {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px
+        }
+
+        .log th,
+        .log td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
 </head>
-<body>
-<div class="container">
-    <div class="header">
-        <img src="logo-link-here" alt="ShareCode Logo">
-    </div>
-    <div class="content">
-        <h2>Account Locked</h2>
-        <p>Dear {(USER_NAME)},</p>
-        <p>Your ShareCode account has been temporarily locked due to multiple invalid login attempts. This measure is in place to ensure the security of your account.</p>
-        
-        <p>To reset your password and regain access, please click the link below:</p>
-        <a href="{(RESET_URL)}" class="button">Reset Password</a>
 
-        <h3>Unsuccessful Login Attempts</h3>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Date & Time</th>
-                    <th>IP Address</th>
-                    <th>Country</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>{(LAST_ATTEMPT_OCCURENCE)}</td>
-                    <td>{(IP_ADDRESS)}</td>
-                    <td>{(COUNTRY)}</td>
-                </tr>
-                <!-- Additional rows can be added here -->
-            </tbody>
-        </table>
-
-        <p>If you did not make these attempts or believe this action to be in error, please contact our support team immediately.</p>
-    </div>
-    <div class="footer">
-        <p>&copy; 2023 ShareCode. All rights reserved.</p>
-    </div>
-</div>
+<body
+    style="font-family: Arial, sans-serif; background-color: #06070A; text-align: center; padding: 50px; color: #ffffff;">
+    <table
+        style="max-width: 600px; margin: 0 auto; background-color: #121821; border-radius: 1rem; padding: 20px; box-shadow: 0 0 0px rgba(255, 255, 255, 0.1);">
+        <tr>
+            <td style="text-align: center;">
+                <h1 style="margin-bottom: 20px; color: #CED0D4;"> &lt;ShareCode/&gt; </h1>
+                <!-- <img src="https://yourlogo.com/logo.png" alt="Your Logo" width="150"> -->
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 20px;">
+                <h2 style="font-size: 24px; margin-bottom: 20px; color: #CED0D4;">Account Locked!</h2>
+                <p style="font-size: 16px; color: #e7e6e6; line-height: 1.5rem;">{(USER_NAME)}, </p>
+                <p style="font-size: 16px; color: #e7e6e6; line-height: 1.5rem;">Your account has been temporarily
+                    locked due to
+                    multiple invalid login attempts. This is to
+                    ensure the security of your account.</p>
+                <p style="font-size: 16px; color: #aaaaaa; line-height: 1.5rem;">To reset your password and regain
+                    access, click the button below:</p>
+                <a href="{(RESET_URL)}"
+                    style="background-color: #049F8D; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; margin-top: 20px; font-size: 16px;">Reset
+                    Password</a>
+                <table class="log">
+                    <thead>
+                        <tr>
+                            <th>Date & Time</th>
+                            <th>IP Address</th>
+                            <th>Country</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{(LAST_ATTEMPT_OCCURENCE)}</td>
+                            <td>{(IP_ADDRESS)}</td>
+                            <td>{(COUNTRY)}</td>
+                        </tr>
+                        <!-- Additional rows can be added here -->
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center; padding-top: 20px;">
+                <p style="font-size: 14px; color: #aaaaaa;">Contact our team at <a href="mailto:sharecodeapp@gmail.com"
+                        style="color: #007BFF;">sharecodeapp@gmail.com</a></p>
+            </td>
+        </tr>
+    </table>
+    <p style="font-size: 14px; color: #aaaaaa; margin-top: 20px;">&copy; 2023 ShareCode. All rights reserved.</p>
 </body>
+
 </html>
