@@ -1,77 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShareCode Email Verification</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        table, td {
-            border: 1px solid #ccc;
-        }
-
-        td {
-            padding: 20px;
-        }
-
-        h2 {
-            margin: 0;
-        }
-
-        p {
-            margin: 10px 0;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
+    <meta charset="utf-8">
 </head>
-<body>
 
-    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+<body
+    style="font-family: Arial, sans-serif; background-color: #06070A; text-align: center; padding: 50px; color: #ffffff;">
+    <table
+        style="max-width: 600px; margin: 0 auto; background-color: #121821; border-radius: 1rem; padding: 20px; box-shadow: 0 0 0px rgba(255, 255, 255, 0.1);">
         <tr>
-            <td align="center">
-                <table width="100%" border="0" cellspacing="0" cellpadding="20">
-                    <tr>
-                        <td align="center" bgcolor="#f5f5f5">
-                            <h2>ShareCode Email Verification</h2>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>Thank you for signing up with ShareCode {(USER_NAME)} ! To complete the registration process, please verify your email address by clicking the button below:</p>
-                            <p align="center">
-                                <a href="{(VERIFICATION_URL)}">
-                                    <img src="insert_image_url_here" alt="Verify Email">
-                                </a>
-                            </p>
-                            <p>If the button above does not work, you can also verify your email address by clicking on the following link:</p>
-                            <p align="center">
-                                <a href="{(VERIFICATION_URL)}">Verify Email</a>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="center" bgcolor="#f5f5f5">
-                            <p>If you have any questions or need assistance, please contact our support team at <a href="mailto:support@sharecode.com">support@sharecode.com</a>.</p>
-                        </td>
-                    </tr>
-                </table>
+            <td style="text-align: center;">
+                <h1 style="margin-bottom: 20px; color: #CED0D4;"> &lt;ShareCode/&gt; </h1>
+                <!-- <img src="https://yourlogo.com/logo.png" alt="Your Logo" width="150"> -->
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 20px;">
+                <h2 style="font-size: 24px; margin-bottom: 20px; color: #CED0D4;">Welcome!</h2>
+                <p style="font-size: 16px; color: #e7e6e6; line-height: 1.5rem;">{(USER_NAME)}, </p>
+                <p style="font-size: 16px; color: #e7e6e6; line-height: 1.5rem;">Thank you for signing up in ShareCode
+                </p>
+                <p style="font-size: 16px; color: #aaaaaa;; line-height: 1.5rem;">To complete the registration process,
+                    please verify your email address by clicking the button below:</p>
+                <a href="{(VERIFICATION_URL)}"
+                    style="background-color: #049F8D; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; margin-top: 20px; font-size: 16px;">
+                    Verify Email</a>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center; padding-top: 20px;">
+                <p style="font-size: 14px; color: #aaaaaa;">Contact our team at <a href="mailto:sharecodeapp@gmail.com"
+                        style="color: #007BFF;">sharecodeapp@gmail.com</a></p>
             </td>
         </tr>
     </table>
-
+    <p style="font-size: 14px; color: #aaaaaa; margin-top: 20px;">&copy; 2023 ShareCode. All rights reserved.</p>
 </body>
+
 </html>
