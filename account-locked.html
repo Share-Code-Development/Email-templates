@@ -3,25 +3,24 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
     <style>
-        .log {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 30px
+        @media only screen and (max-width: 600px) {
+            body {
+                padding: 0;
+            }
         }
 
-        .log th,
-        .log td {
-            border: 1px solid #313131;
-            padding: 8px;
-            text-align: left;
-            color: #aaaaaa;
+        @media only screen and (min-width: 601px) {
+            body {
+                padding: 50px;
+            }
         }
     </style>
 </head>
 
-<body
-    style="font-family: Arial, sans-serif; text-align: center; padding: 50px; color: #ffffff;">
+<body style="font-family: Arial, sans-serif; text-align: center; color: #ffffff;">
     <table
         style="max-width: 600px; margin: 0 auto; background-color: #121821; border-radius: 1rem; padding: 20px; box-shadow: 0 0 0px rgba(255, 255, 255, 0.1);">
         <tr>
@@ -43,23 +42,13 @@
                 <a href="{(GATEWAY_URL)}"
                     style="background-color: #049F8D; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; margin-top: 20px; font-size: 16px;">Reset
                     Password</a>
-                <table class="log">
-                    <thead>
-                        <tr>
-                            <th>Date & Time</th>
-                            <th>IP Address</th>
-                            <th>Country</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>{(LAST_ATTEMPT_OCCURENCE)}</td>
-                            <td>{(IP_ADDRESS)}</td>
-                            <td>{(COUNTRY)}</td>
-                        </tr>
-                        <!-- Additional rows can be added here -->
-                    </tbody>
-                </table>
+                <div style="margin-top: 30px;">
+                    <div style="text-align: left;">
+                        <p><strong>Date & Time:</strong> {(LAST_ATTEMPT_OCCURENCE)}</p>
+                        <p><strong>IP Address:</strong> {(IP_ADDRESS)}</p>
+                        <p><strong>Country:</strong> {(COUNTRY)}</p>
+                    </div>
+                </div>
             </td>
         </tr>
         <tr>
